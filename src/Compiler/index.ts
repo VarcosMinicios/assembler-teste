@@ -329,22 +329,22 @@ export class Compiler {
     /**
      * Copy `.adonisrc.json` file
      */
-    await this.copyAdonisRcFile(config.options.outDir!)
+    // await this.copyAdonisRcFile(config.options.outDir!)
 
     /**
      * Generate commands manifest
      */
-    const manifest = new Manifest(config.options.outDir!, this.logger)
-    const created = await manifest.generate()
+    // const manifest = new Manifest(config.options.outDir!, this.logger)
+    // const created = await manifest.generate()
 
     /**
      * Do not continue when unable to generate the manifest file as commands
      * won't be available
      */
-    if (!created) {
-      await this.cleanupBuildDirectory(config.options.outDir!)
-      return false
-    }
+    // if (!created) {
+    //   await this.cleanupBuildDirectory(config.options.outDir!)
+    //   return false
+    // }
 
     /**
      * Print usage instructions
