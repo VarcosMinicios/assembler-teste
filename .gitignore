@@ -1,4 +1,4 @@
-node_modules
+#node_modules
 coverage
 .DS_STORE
 .nyc_output
@@ -7,7 +7,7 @@ coverage
 *.sublime-project
 *.sublime-workspace
 *.log
-build
+#build
 dist
 package-lock.json
 yarn.lock
