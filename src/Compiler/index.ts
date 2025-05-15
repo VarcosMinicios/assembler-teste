@@ -17,7 +17,7 @@ import { logger as uiLogger, instructions } from '@poppinss/cliui'
 
 import { Ts } from '../Ts'
 import { RcFile } from '../RcFile'
-import { Manifest } from '../Manifest'
+// import { Manifest } from '../Manifest'
 import { RCFILE_NAME } from '../../config/paths'
 import { AssetsBundler } from '../AssetsBundler'
 
@@ -73,6 +73,7 @@ export class Compiler {
   /**
    * Copies .adonisrc.json file to the destination
    */
+  // @ts-ignore
   private async copyAdonisRcFile(outDir: string) {
     this.logger.info(
       `copy { ${this.logger.colors

@@ -20,7 +20,7 @@ const ioc_transformer_1 = require("@adonisjs/ioc-transformer");
 const cliui_1 = require("@poppinss/cliui");
 const Ts_1 = require("../Ts");
 const RcFile_1 = require("../RcFile");
-const Manifest_1 = require("../Manifest");
+// import { Manifest } from '../Manifest'
 const paths_1 = require("../../config/paths");
 const AssetsBundler_1 = require("../AssetsBundler");
 /**
@@ -62,6 +62,7 @@ class Compiler {
     /**
      * Copies .adonisrc.json file to the destination
      */
+    // @ts-ignore
     async copyAdonisRcFile(outDir) {
         this.logger.info(`copy { ${this.logger.colors
             .dim()
@@ -254,20 +255,20 @@ class Compiler {
         /**
          * Copy `.adonisrc.json` file
          */
-        await this.copyAdonisRcFile(config.options.outDir);
+        // await this.copyAdonisRcFile(config.options.outDir!)
         /**
          * Generate commands manifest
          */
-        const manifest = new Manifest_1.Manifest(config.options.outDir, this.logger);
-        const created = await manifest.generate();
+        // const manifest = new Manifest(config.options.outDir!, this.logger)
+        // const created = await manifest.generate()
         /**
          * Do not continue when unable to generate the manifest file as commands
          * won't be available
          */
-        if (!created) {
-            await this.cleanupBuildDirectory(config.options.outDir);
-            return false;
-        }
+        // if (!created) {
+        //   await this.cleanupBuildDirectory(config.options.outDir!)
+        //   return false
+        // }
         /**
          * Print usage instructions
          */
